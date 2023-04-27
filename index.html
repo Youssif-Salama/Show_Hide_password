@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIDE_SHOW_PASSWORD</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="field">
+        <input :type="fieldType" required placeholder="password" />
+        <button @click.prevent="switchPassword">Hide/Show</button>
+      </div>
+      <script src="vue.js"></script>
+      <script>
+        var app = new Vue({
+          el: ".container",
+          data: {
+            fieldType: "password",
+          },
+          methods: {
+            switchPassword() {
+            //   this.fieldType = this.fieldType=== "password"
+            //     ? "text"
+            //     : "password";
+            if(this.fieldType==="password")
+            {
+                this.fieldType="text";
+            }
+            else{
+                this.fieldType="password";
+            }
+            },
+          },
+        });
+      </script>
+    </div>
+  </body>
+</html>
